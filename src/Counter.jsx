@@ -7,20 +7,21 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <Share
-          render={(count, incrementCount) => {
+        <Share>
+          {(count, incrementCount) => {
             return (
               <ClickCounterTwo count={count} incrementCount={incrementCount} />
             );
           }}
-        />
-        <Share
-          render={(count, incrementCount) => {
+        </Share>
+
+        <Share>
+          {(count, incrementCount) => {
             return (
               <HoverCounterTwo count={count} incrementCount={incrementCount} />
             );
           }}
-        />
+        </Share>
       </div>
     );
   }

@@ -18,7 +18,7 @@ class Share extends Component {
         // passing the shared fuctionality as a prop to be accessed by the components requring the fuctionality
         return (
             <div>
-                {this.props.render(this.state.count, this.incrementCount)}
+                {this.props.children(this.state.count, this.incrementCount)}
             </div>
         )
     }
